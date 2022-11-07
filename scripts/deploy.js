@@ -36,9 +36,11 @@ const {
         2
       )
     )
-  
+    const [deployer] = await ethers.getSigners();
+    console.log("Contract Deployed by"+ deployer.address);
+    console.log("Token address (Contract Address):", token.address);
     console.log(
-      `MinimalForwarder: ${forwarder.address}`
+      ` MinimalForwarder: ${forwarder.address}`
     )
   }
   
